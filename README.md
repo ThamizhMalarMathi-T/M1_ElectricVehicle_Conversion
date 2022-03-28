@@ -1,2 +1,2 @@
-# M1_ElectricVehicle_Conversion
-Naming Convention: M1_Overall analysis of parameters in conventional to electric vehicle conversion
+# M1_YBus_Singular_Transformation
+Naming Convention: M1_Calculation of admittance for a given power system to conduct load flow analysis.
