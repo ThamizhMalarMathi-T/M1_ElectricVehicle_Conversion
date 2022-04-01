@@ -10,6 +10,10 @@ They are
 - Direct Inspection Method
 - Singular transformation Method
 
+### Direct Inspection Method
+
+In Direct Inspection Method, YBUS can be constructed by directly using the network parameters values. The network is usually represented by its pi-model. The diagonal elements of YBUS matrix is sum of all admittances connected to particular node. Off-diagonal elements is equal to negative of admittances connected between two nodes. If there is no interconnection between two buses, then that particular element will be represented by zero. The condition for applying this method is there is no mutual coupling between the buses. If there is mutual coupling this method is not applicable, then we need go for Singular transformation Method
+
 ### Singular Transformation Method
 
 With help of graph theory, the network is formedand bus incidence matrix is
