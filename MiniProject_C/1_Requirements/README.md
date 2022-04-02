@@ -35,7 +35,67 @@ buses and element connections. The conditions are
   - Display the bus incidence matrix and its transpose
   - Fill the diagonal of a 2D matrix with elemental impedances and required offdiagonal elements with mutual impedances (if any)
   - Display bus primitive impedance matrix and primitive admittance matrix
-  - [Ybus] is formed by computing {[A]T * Yprim}*A
+  - [Ybus] is formed by computing {[A]^T * Yprim}*A
 
 These functions can be easily executed in MATLAB code with functions that are in-built. But this application gives an overall idea of what goes on behind those functions and how they are called over and over within a program.
 
+### Benefits
+
+#### - Easy calculation of Y_bus
+    Calculation of Y_bus is made easier in this program as it uses the fuctions and pointers to calculate the steps and have been reused within the program. The functions in this program can be reused across many programs for calculation of other power system parameters.
+
+#### - Load Flow analysis
+    This functions can be used accross various problems for load flow analysis with power systems and atrices of any order. The reusability of the code makes first time users understand how the operations in power flow ananlysis are repeated within processes and how admittance is the inverse impedence.
+
+## Functions
+
+  | Feature | Description 
+  |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------
+  |  F1     | Calculates the bus admittance matrix using the number of buses, number of elements, starting bus and ending bus of the elemnets.
+  |  F2     | Calculates the primitive impedence matrix using the primitive elements, and mutual impedence values
+  |  F3     | Calculates the y_bus matrix by calculating determinant and cofactor matrix of primitive impedence 
+  |  F4     | Performs matrix multiplication to calculate Y_Bus
+  
+## SWOT Analysis
+
+### Who
+
+    - Students trying to solve power flow analysis problems
+    - Students who try to reuse code for various other methods of load flow analysis
+    
+### What
+
+    - The hand calculations get a little too complicated when the bus system get larger and larger with matrix multiplications and debugging becomes tedius. This could be a go to for all sizes of matrices
+    
+### When
+
+    - These methods will continue to remain true for generations to come whn it comes to analyzing power systems.
+    
+### Where
+
+    -Engineering institutions, electrical projects, schools, Project development and many more.
+    
+### How
+
+    - It only receives input in two places and does the rest of the calculations by itself.
+    - Only the basic knowlege and data about buses, elements and impedences required.
+    
+## High Level Requirements
+
+| ID | Description | Category |  
+| ----- | ----- | ------- | 
+| HLR01 | User should identify the buses, elements, starting and ending buses | Technical | 
+| HLR02 | User should be able to calculate the bus incidence matrix and transpose | Technical |
+| HLR03 | User to identify the primitive elements and calculate z bus | Technical | 
+| HLR04 | User to calculate inverse of z bus, and find y bus | Technical |
+
+## Low level requirements
+
+| ID | Description | Category |  
+| ----- | ----- | ------- | 
+| LLR01 | The bus admittance matrix will be calculated using the number of buses, number of elements, starting bus and ending bus of the elemnets.| HLR01 | 
+| LLR02 | User should be able to calculate the transpose of bus admittance matrix | HLR02 |
+| LLR03 | User should be able to calculate the z bus | HLR03 | 
+| LLR04 | User should be able to calculate inverse of z bus, and find y bus | HLR04 |
+    
+  
